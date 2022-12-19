@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const mainN = prompt('Введите длину главного массива');
+        const subN = prompt('Введите длину внутренних массивов');
+        const arr = new Array(+mainN).fill(0)
+        .map((_, ind) =>
+            new Array(+subN).fill(0).map((_, i) => prompt(`Введите элемент ${i} в подмассиве ${ind}`)));
+        alert('Ваш массив:' + arr.map(subArr => '\n' + subArr));
+    </script>
+</body>
+</html>

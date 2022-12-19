@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ownArray = [
+        'Boolean',
+        'Undefined',
+        23,
+        'String',
+        'Null',
+        15,
+        54, 
+        NaN
+        ];
+        let count = 0;
+        console.log(ownArray.reduce((a, b) =>{
+            if(typeof b === "number" && !isNaN(b)){
+                ++count;
+                return a += b;
+            }else return a
+        }, 0) / count || 0);    
+    </script>
+</body>
+</html>
