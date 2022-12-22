@@ -8,23 +8,26 @@
 </head>
 <body>
     <script>
-        let ownArray = [
-        'Boolean',
-        'Undefined',
-        23,
-        'String',
-        'Null',
-        15,
-        54, 
-        NaN
-        ];
-        let count = 0;
-        console.log(ownArray.reduce((a, b) =>{
-            if(typeof b === "number" && !isNaN(b)){
-                ++count;
-                return a += b;
-            }else return a
-        }, 0) / count || 0);    
+    let ownArray = 
+    ['Boolean',
+    'Undefined',
+    23,
+    'String',
+    'Null',
+    15,
+    54,
+    NaN];
+    let count = 0;
+    const func = (arr) => {
+    return arr.reduce((a, b) =>{
+        if(typeof b === "number" && !isNaN(b)){
+            ++count;
+            return a += b;
+        }
+    return a
+    }, 0) / count || 0
+    }
+    console.log(func(ownArray));
     </script>
 </body>
 </html>
